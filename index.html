@@ -10,21 +10,51 @@
       background-image: linear-gradient(to bottom right, #1A2980, #26D0CE) ;
       height: 100vh;
       padding-top: 5%;
+      position: absolute;
     }
     #mainCard{
       background-color: whitesmoke;
       width: 70%;
       margin: auto;
       border-radius: 10px;
-      height:480px;
+      height: 480px;
+      position: relative;
+      /* padding: 10px; */
+    }
+    .button-box{
+      width:220px;
+      margin: 35px auto;
+      position: relative;
+      box-shadow: 0 0 20px 9px #1A29801F;
+      display:flex;
+      justify-content: space-around;
+      border-radius: 50px;
+    }
+    .btn-toggle{
+      background: transparent;
+      position: relative;
+    }
+    #button{
+      top:0;
+      left:0;
+      position: absolute;
+      width:50%;
+      height: 100%;
+      background-color: aqua;
+      border-radius: 50px;
+      transition: 0.5s;
     }
 
   </style>
 </head>
 <body>
   <div class="container-fluid" id="backG">
-    <div class="container" id="mainCard">
-      r
+    <div class="container pt-2 " id="mainCard">
+      <div class="button-box">
+        <div id="button"></div>
+        <button type="submit" class="btn btn-toggle">Login</button>
+        <button type="submit" class="btn btn-toggle">SignUp</button>
+      </div>
     </div>
 
   </div>
