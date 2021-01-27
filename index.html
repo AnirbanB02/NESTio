@@ -1,52 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NESTio</title>
   <link rel="stylesheet" href="css/bootstrap.css">
   <style>
-    #backG{
-      background-image: linear-gradient(to bottom right, #1A2980, #26D0CE) ;
+    #backG {
+      background: #1A2980;
+      /* fallback for old browsers */
+      background: -webkit-linear-gradient(to bottom right, #26D0CE, #1A2980);
+      /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to bottom right, #26D0CE, #1A2980);
+      /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
       height: 100vh;
       padding-top: 5%;
       position: absolute;
     }
-    #mainCard{
+
+    #mainCard {
       background-color: whitesmoke;
-      width: 70%;
+      width: 50%;
       margin: auto;
       border-radius: 10px;
-      height: 480px;
       position: relative;
-      /* padding: 10px; */
+      padding-bottom: 30px;
     }
-    .button-box{
-      width:220px;
+
+    .button-box {
+      width: 220px;
       margin: 35px auto;
       position: relative;
       box-shadow: 0 0 20px 9px #1A29801F;
-      display:flex;
+      display: flex;
       justify-content: space-around;
       border-radius: 50px;
     }
-    .btn-toggle{
+
+    .btn-toggle {
       background: transparent;
       position: relative;
+      border-radius: 50px;
     }
-    #button{
-      top:0;
-      left:0;
+
+    #button {
+      top: 0;
+      left: 0;
       position: absolute;
-      width:50%;
+      width: 50%;
       height: 100%;
       background-color: aqua;
       border-radius: 50px;
       transition: 0.5s;
     }
 
+    #login {
+      padding: 0 10%;
+    }
   </style>
 </head>
+
 <body>
   <div class="container-fluid" id="backG">
     <div class="container pt-2 " id="mainCard">
@@ -55,11 +70,67 @@
         <button type="submit" class="btn btn-toggle">Login</button>
         <button type="submit" class="btn btn-toggle">SignUp</button>
       </div>
+      <form id="login" class="row g-3 needs-validation" novalidate>
+        <div class="col-md-6">
+          <label for="Email" class="form-label">Email ID</label>
+          <input type="email" class="form-control" id="validationCustom01" placeholder="Email" name="Email" required>
+          <div class="valid-feedback">
+            Looks good!
+          </div>
+          <div class="invalid-feedback">
+            Please provide a valid email
+          </div>
+        </div>
+        <div class="col-md-6">
+          <label for="password" class="form-label">Password</label>
+          <input type="password" class="form-control" id="validationCustom02" placeholder="Password" name="password" minlength="8"
+            required>
+          <div class="valid-feedback">
+            Looks good!
+          </div>
+          <div class="invalid-feedback">
+            Atleast 8 characters required
+          </div>
+        </div>
+        <div class="col-md-4">
+
+        </div>
+        <div class="col-md-4" style="text-align: center;">
+          <button class="btn btn-toggle px-5" type="submit" style="background-color: cyan;">Submit</button>
+        </div>
+
+        <div class="col-md-4">
+
+        </div>
+
+      </form>
     </div>
 
   </div>
 
   <script src="https://unpkg.com/@popperjs/core@2"></script>
   <script src="js/bootstrap.js"></script>
+  <script>
+    (function () {
+      'use strict'
+
+      // Fetch all the forms we want to apply custom Bootstrap validation styles to
+      var forms = document.querySelectorAll('.needs-validation')
+
+      // Loop over them and prevent submission
+      Array.prototype.slice.call(forms)
+        .forEach(function (form) {
+          form.addEventListener('submit', function (event) {
+            if (!form.checkValidity()) {
+              event.preventDefault()
+              event.stopPropagation()
+            }
+
+            form.classList.add('was-validated')
+          }, false)
+        })
+    })()
+  </script>
 </body>
+
 </html>
