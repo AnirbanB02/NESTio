@@ -6,6 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NESTio</title>
   <link rel="stylesheet" href="css/bootstrap.css">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+    integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
   <style>
     #backG {
       background: #1A2980;
@@ -22,11 +26,12 @@
 
     #mainCard {
       background-color: whitesmoke;
-      width: 50%;
+      width: 55%;
       margin: auto;
       border-radius: 10px;
       position: relative;
       padding-bottom: 30px;
+      height: 50vh;
     }
 
     .button-box {
@@ -59,6 +64,22 @@
     #login {
       padding: 0 10%;
     }
+
+    #signup {
+      padding: 0 10%;
+      margin-top: 200px;
+    }
+
+    .input-grp {
+      top: 100px;
+      position: absolute;
+      transition: 0.5s;
+      margin:10px;
+    }
+
+    .input-group-text {
+      cursor: pointer;
+    }
   </style>
 </head>
 
@@ -70,7 +91,7 @@
         <button type="submit" class="btn btn-toggle">Login</button>
         <button type="submit" class="btn btn-toggle">SignUp</button>
       </div>
-      <form id="login" class="row g-3 needs-validation" novalidate>
+      <form id="login" class="row g-3 needs-validation input-grp" novalidate>
         <div class="col-md-6">
           <label for="Email" class="form-label">Email ID</label>
           <input type="email" class="form-control" id="validationCustom01" placeholder="Email" name="Email" required>
@@ -83,8 +104,8 @@
         </div>
         <div class="col-md-6">
           <label for="password" class="form-label">Password</label>
-          <input type="password" class="form-control" id="validationCustom02" placeholder="Password" name="password" minlength="8"
-            required>
+          <input type="password" class="form-control" id="validationCustom02" placeholder="Password" name="password"
+            minlength="8" required>
           <div class="valid-feedback">
             Looks good!
           </div>
@@ -102,7 +123,48 @@
         <div class="col-md-4">
 
         </div>
+      </form>
 
+
+      <form id="signup" class="row g-3 needs-validation input-grp" novalidate>
+        <div class="col-md-6">
+          <label for="Email" class="form-label">Email ID</label>
+          <div class="input-group">
+            <input type="email" class="form-control" id="validationCustom01" placeholder="Email" name="Email"
+              aria-label="Email" aria-describedby="basic-addon2" required>
+            <span class="input-group-text" id="basic-addon2">Verify</span>
+          </div>
+          <div class="valid-feedback">
+            Looks good!
+          </div>
+          <div class="invalid-feedback">
+            Please provide a valid email
+          </div>
+        </div>
+        <div class="col-md-6">
+          <label for="password" class="form-label">Password</label>
+          <div class="input-group">
+            <input type="password" class="form-control" id="validationCustom02" placeholder="Password" name="password"
+              minlength="8" required>
+            <span class="input-group-text" id="basic-addon2"><i class="fas fa-eye"></i></span>
+          </div>
+          <div class="valid-feedback">
+            Looks good!
+          </div>
+          <div class="invalid-feedback">
+            Atleast 8 characters required
+          </div>
+        </div>
+        <div class="col-md-4">
+
+        </div>
+        <div class="col-md-4" style="text-align: center;">
+          <button class="btn btn-toggle px-5" type="submit" style="background-color: cyan;">Submit</button>
+        </div>
+
+        <div class="col-md-4">
+
+        </div>
       </form>
     </div>
 
