@@ -29,6 +29,7 @@ body,html{
   right: 45%;
   transform: translateY(-50%);
   z-index:6;
+  transition: 1.5s ease-in-out;
 }
 
 .form-container{
@@ -154,6 +155,7 @@ form.sign-up-form{
 }
 .panel .content{
   color: whitesmoke;
+  transition: .1s .5s ease-in-out;
 }
 
 .panel h3{
@@ -179,9 +181,18 @@ form.sign-up-form{
 
 .image{
   width:100%;
+  transition: .1s .5s ease-in-out;
 }
 
 .right-panel .content, .right-panel .image{
   transform: translateX(800px);
-
 }
+
+/* animations */
+
+.container.sign-up-mode:before{
+  transform: translate(100%, -50%);
+  right: 52%;
+}
+
+.container.sign-up-mode
