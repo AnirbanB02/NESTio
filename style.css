@@ -39,6 +39,14 @@ body,html{
   top:0;
   left:0;
 }
+#logo{
+  height: 70px;
+  position: absolute;
+  margin: 10px 20px;
+  border-radius: 20px;
+  z-index: 10;
+  box-shadow: 1px 1px 5px rgb(90, 90, 90);
+}
 .signin-signup{
   position:absolute;
   top:50%;
@@ -321,6 +329,9 @@ form.sign-up-form{
     transform: translate(-50%, 0);
     left: 50%;
   }
+  #logo{
+    height:50px;
+  }
 }
 
 @media (max-width: 570px){
@@ -338,5 +349,8 @@ form.sign-up-form{
   .container.sign-up-mode:before{
     bottom: 28%;
     left: 50%;
+  }
+  #logo{
+    right: 5px;
   }
 }
