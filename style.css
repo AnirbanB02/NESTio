@@ -93,7 +93,7 @@ form.sign-up-form{
   margin: 10px 0;
   border-radius: 55px;
   display:grid;
-  grid-template-columns: 15% 85%;
+  grid-template-columns: 85% 15%;
   padding: 0 0.4rem;
 }
 
@@ -111,6 +111,7 @@ form.sign-up-form{
   font-weight: 600;
   font-size:1.1rem;
   color: rgb(43, 43, 43);
+  margin-left: 10px;
 }
 
 .input-field input::placeholder{
@@ -196,6 +197,10 @@ form.sign-up-form{
 
 .right-panel .content, .right-panel .image{
   transform: translateX(800px);
+}
+
+.fas.fa-eye, .fas.fa-eye-slash{
+  cursor: pointer;
 }
 
 /* animations */
