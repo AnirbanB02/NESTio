@@ -67,3 +67,17 @@ form{
   color: #aaa;
   font-weight: 500;
 }
+.btn{
+  height: 50px;
+  width: 150px;
+  border: none;
+  outline: none;
+  border-radius: 50px;
+  cursor: pointer;
+  background-color: #5995fd;
+  color: whitesmoke;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 10px 0;
+  transition: 0.5s;
+}
