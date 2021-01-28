@@ -322,3 +322,21 @@ form.sign-up-form{
     left: 50%;
   }
 }
+
+@media (max-width: 570px){
+  form{
+    padding: 0 1.5rem;
+  }
+  .image{
+    display: none;
+  }
+
+  .panel .container{
+    padding: 0.5rem 1rem;
+  }
+
+  .container.sign-up-mode:before{
+    bottom: 28%;
+    left: 50%;
+  }
+}
