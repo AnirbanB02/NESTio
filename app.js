@@ -65,6 +65,7 @@ function SignUpValidation(){
   var pass2 = document.getElementById('Pass2').value;
   var cpass2 = document.getElementById('cPass2').value;
   var Did = document.getElementById('fDid').value;
+  var reg = /^N[0-9]{5}$/;
 
   if(name.length <= 3){
     seterror("nameerror","*Name too short");
@@ -78,6 +79,11 @@ function SignUpValidation(){
 
   if(cpass2 != pass2){
     seterror("cPass2error","*Must match password");
+    returnval = false;
+  }
+
+  if(!reg.test(Did)){
+    seterror("fDiderror","*Invalid Device ID");
     returnval = false;
   }
 
