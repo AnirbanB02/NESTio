@@ -16,3 +16,7 @@ function timer(){
 }
 
 timer();
+
+function otpFail(){
+  
+}
