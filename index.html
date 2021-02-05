@@ -30,66 +30,68 @@
         <form action="" onsubmit="return SignUpValidation()" class="sign-up-form">
           <h2 class="title">Sign up</h2>
 
+          <!-- Name -->
           <div class="input-field">
             <input type="text" id="fname" placeholder="User name">
             <i class="fas fa-user"></i>
           </div>
           <span class="errormsg" id="nameerror"></span>
 
+          <!-- email -->
           <div class="input-field">
             <input type="email" id="femail" placeholder="Email ID">
             <i class="fas fa-envelope"></i>
           </div>
           <span class="errormsg" id="emailerror"></span>
 
+          <!-- password -->
           <div class="input-field">
             <input type="password" id="Pass2" placeholder="Password">
             <i class="fas fa-eye" id="togglePass2"></i>
           </div>
-
           <span class="errormsg" id="Pass2error"></span>
 
+          <!-- Confirm password -->
           <div class="input-field">
             <input type="password" id="cPass2" placeholder="Confirm Password">
             <i class="fas fa-eye" id="togglecPass2"></i>
           </div>
-
           <span class="errormsg" id="cPass2error"></span>
 
+          <!-- Device ID -->
           <div class="input-field">
             <input type="text" id="fDid" placeholder="Device ID">
             <i class="fas fa-microchip"></i>
-          </div>
-
+          </div>          
           <span class="errormsg" id="fDiderror"></span>
 
+          <!-- Switches -->
           <div class="input-field">
-            <input type="text" id="fs1" placeholder="Name of Switch 1">
+            <input type="text" id="fs1" placeholder="Name of Switch 1" value="Switch 1">
             <i class="fa fa-sliders"></i>
           </div>
-
           <span class="errormsg" id="fs1error"></span>
 
           <div class="input-field">
-            <input type="text" id="fs2" placeholder="Name of Switch 2">
+            <input type="text" id="fs2" placeholder="Name of Switch 2" value="Switch 2">
             <i class="fa fa-sliders"></i>
           </div>
-
           <span class="errormsg" id="fs2error"></span>
 
           <div class="input-field">
-            <input type="text" id="fs3" placeholder="Name of Switch 3">
+            <input type="text" id="fs3" placeholder="Name of Switch 3" value="Switch 3">
             <i class="fa fa-sliders"></i>
           </div>
-
           <span class="errormsg" id="fs3error"></span>
 
           <div class="input-field">
-            <input type="text" id="fs4" placeholder="Name of Switch 4">
+            <input type="text" id="fs4" placeholder="Name of Switch 4" value="Switch 4">
             <i class="fa fa-sliders"></i>
           </div>
           <span class="errormsg" id="fs4error"></span>
 
+
+          <!-- submit button -->
           <input type="submit" value="Sign Up" class="btn solid">
         </form>
       </div>
