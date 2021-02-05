@@ -1,27 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100&display=swap');
-
-html, body{
+html, body {
   margin: 0;
   padding: 0;
   font-family: "Poppins", sans-serif;
 }
-.head{
+
+.head {
   margin: 0;
   padding: 0;
 }
 
-p{
+p {
   padding-right: 10px;
 }
 
-.container{
+.container {
   height: 100vh;
   background-color: #0093E9;
   background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
   padding-top: 10%;
   position: relative;
 }
-.card{
+
+.card {
   width: 380px;
   background-color: whitesmoke;
   border-radius: 20px;
@@ -29,48 +30,49 @@ p{
   padding: 50px 25px;
 }
 
-.content{
+.content {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.input-field{
+.input-field {
   max-width: 450px;
   width: 90%;
   height: 55px;
   background-color: #e7e7e7;
   margin: 2px 0;
   border-radius: 55px;
-  display:grid;
+  display: grid;
   grid-template-columns: 85% 15%;
   padding: 0 0.5rem;
 }
 
-.input-field i{
-  text-align:center;
+.input-field i {
+  text-align: center;
   line-height: 55px;
   color: #909090;
   font-size: 1.2rem;
 }
-.input-field input{
-  background: none ;
+
+.input-field input {
+  background: none;
   outline: none;
-  border:none;
+  border: none;
   line-height: 1;
   font-weight: 600;
-  font-size:1.1rem;
+  font-size: 1.1rem;
   color: rgb(43, 43, 43);
   margin-left: 10px;
   border-radius: 50px;
 }
 
-.input-field input::placeholder{
+.input-field input::placeholder {
   color: #414040;
   font-weight: 500;
 }
 
-.btn{
+.btn {
   height: 50px;
   width: 150px;
   border: none;
@@ -85,16 +87,17 @@ p{
   transition: 0.5s;
   padding: 0;
 }
-.btn:hover{
+
+.btn:hover {
   background-color: #72a6ff;
 }
 
-.timer{
- padding-left: 5px;
- color: rgba(255, 0, 0, 0.856);
+.timer {
+  padding-left: 5px;
+  color: rgba(255, 0, 0, 0.856);
 }
 
-.popup{
+.popup {
   position: absolute;
   z-index: 1;
   height: 300px;
@@ -107,24 +110,25 @@ p{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items:center;
+  align-items: center;
   display: none;
   box-shadow: -10px -10px 50px rgb(65, 63, 63);
 }
 
-.popup>p{
+.popup>p {
   color: rgb(88, 88, 88);
-  margin:10px;
-  padding:0;
+  margin: 10px;
+  padding: 0;
   font-weight: 300;
 }
-.popup>h1{
-  margin:10px;
-  padding:0;
+
+.popup>h1 {
+  margin: 10px;
+  padding: 0;
   color: rgba(255, 0, 0, 0.856);
 }
 
-#TimeUp{
+#TimeUp {
   font-size: 150px;
   color: rgba(255, 0, 0, 0.856);
 }

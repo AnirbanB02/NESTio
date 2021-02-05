@@ -45,19 +45,18 @@ togglecPass2.addEventListener('click', function (e) {
 
 //validation of signup form
 
-function seterror(id,error)
-{
+function seterror(id, error) {
   document.getElementById(id).innerHTML = error;
 }
 
-function clearErrors(){
+function clearErrors() {
   var errorspans = document.getElementsByClassName("errormsg");
-  for(let i =0; i< errorspans.length; i++){
+  for (let i = 0; i < errorspans.length; i++) {
     errorspans[i].innerHTML = "";
   }
 }
 
-function SignUpValidation(){
+function SignUpValidation() {
   clearErrors();
   var returnval = true;
 
@@ -67,23 +66,23 @@ function SignUpValidation(){
   var Did = document.getElementById('fDid').value;
   var reg = /^N[0-9]{5}$/;
 
-  if(name.length <= 3){
-    seterror("nameerror","*Name too short");
+  if (name.length <= 3) {
+    seterror("nameerror", "*Name too short");
     returnval = false;
   }
 
-  if(pass2.length < 8){
-    seterror("Pass2error","*Password must be atleast 8 haracters");
+  if (pass2.length < 8) {
+    seterror("Pass2error", "*Password must be atleast 8 haracters");
     returnval = false;
   }
 
-  if(cpass2 != pass2){
-    seterror("cPass2error","*Must match password");
+  if (cpass2 != pass2) {
+    seterror("cPass2error", "*Must match password");
     returnval = false;
   }
 
-  if(!reg.test(Did)){
-    seterror("fDiderror","*Invalid Device ID");
+  if (!reg.test(Did)) {
+    seterror("fDiderror", "*Invalid Device ID");
     returnval = false;
   }
 
