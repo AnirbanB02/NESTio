@@ -86,8 +86,5 @@ function SignUpValidation() {
     returnval = false;
   }
 
-
-
-
   return returnval;
 }

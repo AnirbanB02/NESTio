@@ -1,5 +1,5 @@
 var timeLeftDisplay = document.querySelector("#timeLeft");
-let timeleft = 5;  //10min
+let timeleft = 600;  //time in seconds
 
 //timer function
 function timer() {
