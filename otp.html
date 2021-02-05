@@ -16,17 +16,19 @@
         <form action="" id="otpForm">
           <div class="input-field">
             <input type="text" id="fname" placeholder="Your Code Here">
-            <i class="fas fa-user"></i>
+            <i class="fas fa-key"></i>
           </div>
-          <span class="errormsg" id="nameerror"></span>
+          <span class="errormsg" id="otperror"></span>
           
           <input type="submit" value="Verify" class="btn">
         </form>
         <div class="timer">
-          10:00 min left
+          <span id="timeLeft"></span> min left
         </div>
       </div>
     </div>
   </div>
+
+  <script src="otp.js"></script>
 </body>
 </html>

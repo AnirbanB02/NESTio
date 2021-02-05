@@ -82,6 +82,7 @@ p{
   font-weight: 600;
   margin: 10px 0;
   transition: 0.5s;
+  padding: 0;
 }
 .btn:hover{
   background-color: #72a6ff;
