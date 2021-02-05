@@ -1,5 +1,5 @@
 var timeLeftDisplay = document.querySelector("#timeLeft");
-let timeleft = 600;  //10min
+let timeleft = 5;  //10min
 
 //timer function
 function timer(){
@@ -11,12 +11,14 @@ function timer(){
     let sec = timeleft%60;
     timeLeftDisplay.innerHTML = min + ":" + sec ;
     timeleft -= 1;
+    if(timeleft < 0){
+      document.querySelector(".popup").style.display  = "flex";
+      setTimeout(function() {
+        window.location.href = "./index.html"        
+      }, 5000);
+    }
     
   }, 1000);
 }
 
 timer();
-
-function otpFail(){
-  
-}

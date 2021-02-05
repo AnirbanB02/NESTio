@@ -91,7 +91,7 @@ p{
 
 .timer{
  padding-left: 5px;
- color: red;
+ color: rgba(255, 0, 0, 0.856);
 }
 
 .popup{
@@ -109,21 +109,22 @@ p{
   justify-content: center;
   align-items:center;
   display: none;
+  box-shadow: -10px -10px 50px rgb(65, 63, 63);
 }
 
 .popup>p{
-  color: black;
+  color: rgb(88, 88, 88);
   margin:10px;
   padding:0;
-  font-style: italic;
+  font-weight: 900;
 }
 .popup>h1{
   margin:10px;
   padding:0;
-  color: red;
+  color: rgba(255, 0, 0, 0.856);
 }
 
 #TimeUp{
   font-size: 150px;
-  color: red;
+  color: rgba(255, 0, 0, 0.856);
 }
