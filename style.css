@@ -9,15 +9,16 @@ body, html {
   font-family: "Poppins", sans-serif;
 }
 
-.popup{
+.popup {
   background-color: rgba(0, 0, 0, 0.5);
   position: absolute;
   height: 100vh;
   width: 100vw;
   z-index: 20;
+  display: none;
 }
 
-.card{
+.card {
   width: 35vw;
   background-color: whitesmoke;
   border-radius: 20px;
@@ -31,18 +32,18 @@ body, html {
   justify-content: center;
 }
 
-.otpContent p{
+.otpContent p {
   margin: 25px 0;
 }
 
-.otpContent .input-field{
+.otpContent .input-field {
   max-width: 600px;
   width: 100%;
   height: 55px;
 }
 
-#otpForm{
-  padding:0;
+#otpForm {
+  padding: 0;
 }
 
 .timer {
@@ -139,6 +140,38 @@ form.sign-up-form {
   display: grid;
   grid-template-columns: 85% 15%;
   padding: 0 0.3rem;
+}
+
+#email-field {
+  grid-template-columns: 70% 10% 20%;
+  justify-content: center;
+  align-items: center;
+  padding-right: 0;
+  padding-top: 0;
+}
+
+#email-field i {
+  padding: 0;
+}
+
+.ver-btn {
+  text-align: center;
+  background-color: #5995fd;
+  color: white;
+  height: 90%;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.ver-btn:hover {
+  cursor: pointer;
+  background-color: #72a6ff;
 }
 
 .input-field i {
