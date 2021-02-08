@@ -15,10 +15,12 @@ var otpPara = document.querySelector('.otpContent p');
 let timeleft = 15;  //time in seconds
 let verEmail = false;
 
+//signup mode on
 sign_up_btn.addEventListener('click', () => {
   container.classList.add("sign-up-mode");
 });
 
+//signin mode on
 sign_in_btn.addEventListener('click', () => {
   container.classList.remove("sign-up-mode");
 });
@@ -63,6 +65,7 @@ function clearErrors() {
   }
 }
 
+//verifying the form details
 function SignUpValidation() {
   clearErrors();
   var returnval = true;
@@ -93,8 +96,8 @@ function SignUpValidation() {
     returnval = false;
   }
 
-  if(!verEmail){
-    seterror("emailerror","Email not verified");
+  if (!verEmail) {
+    seterror("emailerror", "Email not verified");
     returnval = false;
   }
 
@@ -111,13 +114,14 @@ function timer() {
     let sec = timeleft % 60;
     timeLeftDisplay.innerHTML = min + ":" + sec;
     timeleft -= 1;
-    
-    //redirect to main page (not working)
+
+    //changing the content for timeover
     if (timeleft < 0) {
       otphead.innerHTML = "Email Not Verified";
       otphead.style.color = "red";
       otpPara.innerHTML = "You will be redirectred to the signup page again automatically";
 
+      //reloading the page
       setTimeout(function () {
         window.location.reload();
       }, 5000);
@@ -128,7 +132,8 @@ function timer() {
 
 let emailVal = document.getElementById('femail').value;
 
-verBtn.addEventListener('click',function(e){
+//verifying the email
+verBtn.addEventListener('click', function (e) {
   // alert("clicked");
   verEmail = true;
   document.querySelector('.popup').style.display = 'block';

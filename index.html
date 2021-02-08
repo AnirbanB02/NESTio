@@ -12,6 +12,8 @@
 </head>
 
 <body>
+
+  <!-- popup card for email Verification -->
   <div class="popup">
     <div class="card">
       <div class="otpContent">
@@ -33,10 +35,15 @@
       </div>
     </div>
   </div>
+  <!-- popup card for email Verification ends here-->
+
+  <!-- main page container -->
   <div class="container">
     <img id="logo" src="assets/images/NESTio.png" alt="NESTio logo">
     <div class="form-container">
       <div class="signin-signup">
+
+        <!-- sign in form -->
         <form action="" class="sign-in-form">
           <h2 class="title">Sign in</h2>
           <div class="input-field">
@@ -53,6 +60,7 @@
           <input type="submit" value="Login" class="btn solid">
         </form>
 
+        <!-- sign up form  -->
         <form action="" onsubmit="return SignUpValidation()" class="sign-up-form">
           <h2 class="title">Sign up</h2>
 
@@ -124,9 +132,14 @@
           <!-- submit button -->
           <input type="submit" value="Sign Up" class="btn solid">
         </form>
+
       </div>
     </div>
+
+    <!-- switching between sign in & up modes -->
     <div class="panel-container">
+
+      <!-- from signin to signup  -->
       <div class="panel left-panel">
         <div class="content">
           <h3>Hey wanna join us?</h3>
@@ -136,15 +149,16 @@
         <img src="assets/images/sign_up.svg" alt="SignUn" class="image">
       </div>
 
+      <!-- from signup to signin  -->
       <div class="panel right-panel">
         <div class="content">
           <h3>Already a member?</h3>
           <p>Welcome Back, fill up the details and log in to NESTio <br> #Stay_Connected</p>
           <button class="btn transparent" id="sign-in-btn">Sign in</button>
-
         </div>
         <img src="assets/images/sign_in.svg" alt="SignIn" class="image">
       </div>
+      
     </div>
   </div>
   <script src="app.js"></script>
