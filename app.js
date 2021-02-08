@@ -8,6 +8,13 @@ const passwordone = document.querySelector("#Pass1");
 const password2 = document.querySelector("#Pass2");
 const cpassword2 = document.querySelector("#cPass2");
 
+const verBtn = document.querySelector('.ver-btn');
+const timeLeftDisplay = document.querySelector("#timeLeft");
+var otphead = document.querySelector('.otpContent .head');
+var otpPara = document.querySelector('.otpContent p');
+let timeleft = 15;  //time in seconds
+let verEmail = false;
+
 sign_up_btn.addEventListener('click', () => {
   container.classList.add("sign-up-mode");
 });
@@ -72,7 +79,7 @@ function SignUpValidation() {
   }
 
   if (pass2.length < 8) {
-    seterror("Pass2error", "*Password must be atleast 8 haracters");
+    seterror("Pass2error", "*Password must be atleast 8 characters");
     returnval = false;
   }
 
@@ -86,5 +93,45 @@ function SignUpValidation() {
     returnval = false;
   }
 
+  if(!verEmail){
+    seterror("emailerror","Email not verified");
+    returnval = false;
+  }
+
   return returnval;
 }
+
+//timer function
+function timer() {
+  setInterval(function () {
+    if (timeleft <= 0) {
+      clearInterval(timeleft = 0);
+    }
+    let min = Math.floor(timeleft / 60);
+    let sec = timeleft % 60;
+    timeLeftDisplay.innerHTML = min + ":" + sec;
+    timeleft -= 1;
+    
+    //redirect to main page (not working)
+    if (timeleft < 0) {
+      otphead.innerHTML = "Email Not Verified";
+      otphead.style.color = "red";
+      otpPara.innerHTML = "You will be redirectred to the signup page again automatically";
+
+      setTimeout(function () {
+        window.location.reload();
+      }, 5000);
+    }
+
+  }, 1000);
+}
+
+let emailVal = document.getElementById('femail').value;
+
+verBtn.addEventListener('click',function(e){
+  // alert("clicked");
+  verEmail = true;
+  document.querySelector('.popup').style.display = 'block';
+  console.log(emailVal);
+  timer();
+});
