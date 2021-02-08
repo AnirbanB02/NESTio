@@ -1,4 +1,4 @@
-var timeLeftDisplay = document.querySelector("#timeLeft");
+const timeLeftDisplay = document.querySelector("#timeLeft");
 let timeleft = 600;  //time in seconds
 
 //timer function
@@ -11,11 +11,13 @@ function timer() {
     let sec = timeleft % 60;
     timeLeftDisplay.innerHTML = min + ":" + sec;
     timeleft -= 1;
+    
+    //redirect to main page (not working)
     if (timeleft < 0) {
       document.querySelector(".popup").style.display = "flex";
       setTimeout(function () {
         window.location.href = "./index.html"
-      }, 5000);
+      }, 1000);
     }
 
   }, 1000);
