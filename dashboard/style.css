@@ -33,10 +33,11 @@ main{
 }
 
 .glass{
-  height: 80vh;
+  background: white;
+  min-height: 80vh;
   width: 70vw;
-  border-radius: 2rem;
   background: linear-gradient(to top right, rgba(255,255,255,0.8),rgba(255,255,255,0.3));
+  border-radius: 2rem;  
   z-index:2;
   backdrop-filter: blur(2rem); 
 }
