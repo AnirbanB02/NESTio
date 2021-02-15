@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 * {
   padding: 0;
   margin: 0;
@@ -6,7 +7,7 @@
 }
 
 body, html {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   background: linear-gradient(to top, rgb(14, 148, 238), black);
   height: 100vh;
   margin: 0;
@@ -16,7 +17,9 @@ body, html {
 #mainHead{
   color: white;
   text-align: center;
-  font-weight: 400;
+  font-size: 2.5rem;
+  letter-spacing: 5px;
+  font-weight: 500;
   padding-top: 20px;
   height: 10%;
 }
@@ -43,15 +46,31 @@ main{
   font-weight: 400;
   font-size: 2rem;
   padding: 10px 5px;
+  letter-spacing: 3px;
+  text-align: center;
+}
+
+#nest{
+  font-weight: 600;
+  font-size: 2.2rem;
+  letter-spacing: 0;
+}
+
+#io{
+  color: red;
+  font-weight: 600;
+  letter-spacing: 0;
 }
 
 .welcome img{
-  border-radius: 10px;
-  padding: 10px 5px;
+  border-radius: 20px;
+  /* padding: 10px 5px; */
+  box-shadow: 5px 5px 20px black;
 }
 
 .welcome p{
   padding: 10px 5px;
+  margin: 5px;
 }
 
 .dash{
@@ -74,7 +93,7 @@ main{
   padding: 5px 5px;
   color: white;
   font-weight: 300;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -86,4 +105,15 @@ main{
 .dash-items:hover{
   background-color: white;
   color: black;
+}
+
+@media (max-width: 800px){
+  main{
+    flex-direction: column;
+  }
+
+  .dash{
+    grid-template-columns: 1fr 1fr ;
+  }
+  
 }
